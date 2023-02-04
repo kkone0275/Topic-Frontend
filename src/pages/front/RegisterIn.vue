@@ -5,7 +5,7 @@
         <div class="flex">
           <p class="word-title">會員註冊</p>
           <p class="word-title-r">已經註冊</p>
-          <a class="word-title-r" href="">登入</a>
+          <q-btn class="sin" color="deep-orange-5" label="登入" />
         </div>
         <hr>
         <div class="q-pa-md">
@@ -20,7 +20,8 @@
                 <q-icon name="mail" />
                 E-mail信箱
               </p>
-              <q-input outlined v-model="email" :dense="dense" />
+              <q-input outlined v-model="form.email" type="email" :rules="[rules.email, rules.required]"
+                :dense="dense" />
               <p>
                 <q-icon name="key" />
                 你的密碼
@@ -62,7 +63,7 @@
   font-weight: bold;
   margin-top: 20px;
   margin-left: 30px;
-  margin-right: 225px;
+  margin-right: 200px;
 }
 
 p {
@@ -81,7 +82,15 @@ p {
   margin-bottom: 10px;
 }
 
+.sin {
+  font-weight: bold;
+  font-size: 18px;
+  height: 20px;
+  margin-top: 18px;
+}
+
 .glossy {
+  font-weight: bold;
   font-size: 18px;
   width: 460px;
   height: 35px;
@@ -90,4 +99,5 @@ p {
 </style>
 
 <script setup>
+
 </script>

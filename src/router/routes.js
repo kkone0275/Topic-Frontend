@@ -5,8 +5,8 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('src/pages/front/IndexPage.vue') },
-      { path: 'register', component: () => import('src/pages/front/RegisterIn.vue') }
+      { path: '', component: () => import('src/pages/front/IndexPage.vue'), meta: { title: '首頁' } },
+      { path: 'register', component: () => import('src/pages/front/RegisterIn.vue'), meta: { title: '註冊頁' } }
     ]
   },
   {
@@ -25,8 +25,8 @@ const routes = [
   }
 ]
 
-// router.afterEach((to, from) => {
-//   document.title = to.meta.title
-// })
+routes.afterEach((to, from) => {
+  document.title = to.meta.title
+})
 
 export default routes
