@@ -25,8 +25,8 @@ const routes = [
   }
 ]
 
-routes.afterEach((to, from) => {
-  document.title = to.meta.title
-})
+// routes.afterEach((to, from) => {
+//   document.title = to.meta.title
+// })
 
 export default routes
